@@ -19,7 +19,7 @@ const routes = [
   //New routes:
   { path: "/classes", exact: true, name: "Classes", component: ListarClasses },
   { path: "/classes/add", name: "Adicionar Classe", component: AddClasse },
-  { path: "/matriculas/list", name: "Matricula", component: ListMatricula },
+  { path: "/matrjiculas/list", name: "Matricula", component: ListMatricula },
   { path: "/matricula/add", name: "Matricula", component: AddMatricula },
   { path: "/inscricao", name: "Inscrição", component: Inscricoes },
   { path: "/pagamentos", name: "Pagamentos", component: Pagamentos },
