@@ -17,37 +17,122 @@ function Incricoes() {
   return (
     <>
       <CCard>
-        <CCardHeader> Fazer Inscrição </CCardHeader>
+        <CCardHeader> Formulário de Inscrição </CCardHeader>
         <CCardBody>
           <CForm>
             <CRow>
               <CCol md="6">
-                <CLabel htmlForm="name">Full Name</CLabel>
+                <CLabel htmlForm="name">Nome Completo</CLabel>
                 <CInput name="name" id="name" placeholder="Name" />
               </CCol>
               <CCol md="6">
-                <CLabel htmlForm="date-nasc">Data de Nascimento</CLabel>
+                <CLabel htmlForm="date-nasc">Data de nascimento</CLabel>
                 <CInput
                   type="date"
                   name="date-nasc"
                   id="date-nasc"
                   placeholder="Data de Nascimento"
+                  required
+                />
+              </CCol>
+              <CCol md="6">
+                <CLabel htmlForm="naturalidade">Naturalidae</CLabel>
+                <CInput
+                  type="text"
+                  name="naturalidade"
+                  id="naturalidade"
+                  placeholder="Naturalidade"
+                  required
+                />
+              </CCol>
+              <CCol md="6">
+                <CLabel htmlForm="bairro">Bairro</CLabel>
+                <CInput
+                  type="text"
+                  name="bairro"
+                  id="bairro"
+                  placeholder="bairro"
+                  required
+                />
+              </CCol>
+              <CCol md="6">
+                <CLabel htmlForm="Nacionalidade">Nacionalidade</CLabel>
+                <CInput
+                  type="text"
+                  name="nacionalidade"
+                  id="nacionalidade"
+                  placeholder="Nacionalidade"
+                  required
+                />
+              </CCol>
+
+
+              <CCol md="6">
+                <CLabel htmlForm="Comuna">Comuna</CLabel>
+                <CInput
+                  type="text"
+                  name="Comuna"
+                  id="Comuna"
+                  placeholder="Comuna"
+                  required
                 />
               </CCol>
             </CRow>
-            <br />
             <CRow>
-              <CCol md="6">
-                <CLabel htmlFor="bi">Bi Number</CLabel>
-                <CInput type="text" name="bi" id="bi" placeholder="Bi Number" />
+              <CCol md="4">
+                <CLabel> Documento de identificação </CLabel>
+                <CSelect custom name="gender" id="gender">
+                  <option value="null">Selecione o Dcumento</option>
+                  <option value="masculino"> Passaporte </option>
+                  <option value="femenino"> Bilhete de identidade </option>
+
+                </CSelect>
               </CCol>
               <CCol md="6">
-                <CLabel htmlFor="address"> Endereço </CLabel>
+                <CLabel htmlFor="bi">Nº do documento de Identificação</CLabel>
+                <CInput type="text" name="bi" id="bi" placeholder="Nº" />
+              </CCol>
+              <CCol md="6">
+                <CLabel htmlFor="passadoPor">Passado Por</CLabel>
+                <CInput type="text" name="passadoPor" id="PassadoPor" placeholder="Onde tratou?" />
+              </CCol>
+              <CCol md="6">
+                <CLabel htmlFor="dataDeEmissao">Data de Emissão</CLabel>
+                <CInput type="date" name="dataDeEmissao" id="dataDeEmissao"  />
+              </CCol>
+              <CCol md="6">
+              <CLabel htmlFor="dataDeExpiracao">Data de Expiração</CLabel>
+              <CInput type="date" name="dataDeExpiração" id="dataDeExpiração"   />
+            </CCol>
+            </CRow>
+            <br></br>
+            <br></br>
+            <CRow>
+              <CCol md="6">
+                <CLabel htmlFor="address"> Endereço Actual </CLabel>
                 <CInput
                   type="text"
-                  name="address"
-                  id="address"
-                  placeholder="Ex: Angola Luanda, Sambizanga Casa S/N"
+                  name="rua"
+                  id="ruaActual"
+                  placeholder="Rua"
+                />
+                <CInput
+                  type="text"
+                  name="casa"
+                  id="casa"
+                  placeholder="casa/Apartamento Nº"
+                />
+                <CInput
+                  type="text"
+                  name="bairro"
+                  id="bairroActual"
+                  placeholder="Bairro"
+                />
+                <CInput
+                  type="text"
+                  name="comuna"
+                  id="comunaActual"
+                  placeholder="Comuna/Distrito Urbano"
                 />
               </CCol>
             </CRow>
@@ -66,49 +151,77 @@ function Incricoes() {
                 <CLabel> Curso </CLabel>
                 <CSelect custom name="curso" id="curso">
                   <option value="null">Selecione o Curso</option>
-                  <option value="CFB">Ciência Físicas e Biológicas</option>
-                  <option value="CFJ">Ciência Económicas e Jurídicas</option>
-                  <option value="MP"> Magitério Primário </option>
-                  <option value="EI"> Educador de Infância </option>
+                  <option value="CFB">Técnoco de Enfermagem</option>
+                  <option value="CFJ">Análises Clínica</option>
+                  <option value="MP"> Fisoteraputa </option>
+                  <option value="EI"> Cardiologia </option>
                 </CSelect>
               </CCol>
               <CCol md="4">
-                <CLabel>Classe</CLabel>
+                <CLabel>Nível</CLabel>
                 <CSelect custom name="classe" id="classe">
                   <option value="null">Selecione a Classe</option>
-                  <option value="10ª"> 10ª Décima </option>
-                  <option value="11ª"> 11ª Décima Primeira </option>
-                  <option value="12ª"> 12ª Décima Segunda </option>
-                  <option value="13ª"> 13ª Décima Terceira </option>
+                  <option value="10ª">Ensino Médio</option>
+                  <option value="11ª"> LicençiadoPrimeira </option>
+                  <option value="12ª"> Mestrado</option>
+                  <option value="13ª"> Doturado</option>
+                  <option value="13ª">Curso profissional</option>
                 </CSelect>
               </CCol>
             </CRow>
             <br />
+            <br></br>
             <CRow>
-              <CCol md="4">
-                <CLabel htmlFor="escola-anterior"> Escola Anterior </CLabel>
+            <CCol md="6">
+              <CLabel htmlFor="address"> Escola do Primerio Cíclo </CLabel>
+              <CInput
+                type="text"
+                name="escolaP"
+                id="escolaP"
+                placeholder="Nome:"
+              />
+              <CInput
+                type="number"
+                name="anoP"
+                id="anoP"
+                placeholder="data"
+              />
+              <CInput
+                type="text"
+                name="bairro"
+                id="bairroP"
+                placeholder="Bairro"
+              />
+            </CCol>
+          </CRow>
+          <br />
+          <br />
+          <CRow>
+              <CCol md="6">
+                <CLabel htmlFor="address"> Escola onde Fez o Curso </CLabel>
                 <CInput
-                  name="escola-anterior"
-                  id="escola-anterior"
-                  placeholder="Ex: Santa Catarina"
+                  type="text"
+                  name="nomeM"
+                  id="ruaActual"
+                  placeholder="Nome"
                 />
-              </CCol>
-              <CCol md="4">
-                <CLabel htmlFor="classe-anterior"> Classe Anterior </CLabel>
                 <CInput
-                  name="classe-anterior"
-                  id="classe-anterior"
-                  placeholder="Ex: 9ª Classe"
+                  type="text"
+                  name="anoM"
+                  id="anoM"
+                  placeholder="ano"
                 />
-              </CCol>
-              <CCol md="4">
-                <CLabel htmlFor="media-final">
-                  Média Final da Classe Anterior
-                </CLabel>
                 <CInput
-                  name="media-final"
-                  id="media-final"
-                  placeholder="Ex: 12 Valores"
+                  type="text"
+                  name="bairro"
+                  id="bairroActual"
+                  placeholder="Bairro"
+                />
+                <CInput
+                  type="text"
+                  name="comuna"
+                  id="comunaActual"
+                  placeholder="Comuna/Distrito Urbano"
                 />
               </CCol>
             </CRow>
@@ -145,6 +258,22 @@ function Incricoes() {
               </CCol>
             </CRow>
             <br />
+            <br />
+            <br />
+            <CRow>
+            <CCol md="6">
+            
+              <CLabel htmlFor="certificado">Pagamento Via Multicaixa EXPRESS</CLabel>
+              <CInput type="numer" name="telefoneExpress" id="telefoneExpress" placeholder="Telefone Express" />
+            </CCol>
+            <CCol md="6">
+              <CLabel htmlFor="docident"> - </CLabel>
+              <CInput type="number" name="docident" id="codigoExpress" placeholder="Código" />
+              
+            </CCol>
+          </CRow>
+          <br />
+          <br />
             <CRow>
               <CCol>
                 <CButton color="primary" type="submit">

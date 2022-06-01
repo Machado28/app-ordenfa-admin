@@ -24,26 +24,28 @@ const _nav = [
     _children: [
       {
         _tag: "CSidebarNavItem",
-        name: "Inscrever na Ordenfa",
+        name: "Meu Perfil",
+        to: "/encontrar/perfil",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: " Inscrição",
         to: "/inscricao",
       },
       {
         _tag: "CSidebarNavItem",
-        name: " Desconto directo",
-        to: "/classes",
+        name: " Solicitar Minha Carteira",
+        to: "/minhaCarteira",
       },
       {
         _tag: "CSidebarNavItem",
         name: "Solicitação",
         to: "/disciplinas/list",
       },
-      {
-        _tag: "CSidebarNavItem",
-        name: "Turmas",
-        to: "/turmas/list",
-      },
+      
     ],
   },
+
   {
     _tag: "CSidebarNavDropdown",
     name: "Pedidos de ",
@@ -52,58 +54,31 @@ const _nav = [
     _children: [
       {
         _tag: "CSidebarNavItem",
-        name: "Troca de Especialidade",
+        name: "Carteira",
         to: "/gestadmin/permissoes",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        name: "Reconhecimento",
-        to: "/acessos",
       },
     ],
   },
   {
-    _tag: "CSidebarNavItem",
-    name: "Inscrição",
-    to: "/inscricao",
-    icon: "cil-pencil",
+    _tag: "CSidebarNavDropdown",
+    name: "Actualizações de Carteira",
+    route: "/gAdmin",
+    icon: "cil-cursor",
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Carteira",
+        to: "/gestadmin/permissoes",
+      },
+    ],
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Licença",
+        to: "/gestadmin/permissoes",
+      },
+    ],
   },
-  {
-    _tag: "CSidebarNavItem",
-    name: "Matrícula",
-    to: "/matriculas/list",
-    icon: "cil-calculator",
-    badge: {
-      color: "info",
-      text: "NEW",
-    },
-  },
-  {
-    _tag: "CSidebarNavItem",
-    name: "Avaliações",
-    to: "/avaliacao",
-    icon: "cil-puzzle",
-  },
-  {
-    _tag: "CSidebarNavItem",
-    name: "Pagamentos",
-    to: "/listpagamento",
-    icon: "cil-credit-card",
-    badge: {
-      color: "info",
-      text: "NEW",
-    },
-  },
- 
-
-  
-  {
-    _tag: "CSidebarNavItem",
-    name: "Sair",
-    to: "/login",
-    icon: "cil-notes",
-  },
- 
 ];
 
 export default _nav;
