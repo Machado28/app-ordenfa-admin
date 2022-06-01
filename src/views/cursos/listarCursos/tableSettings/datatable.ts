@@ -1,0 +1,92 @@
+export const dataTable = [
+  {
+    "Nome do Curso": "Ciências Físicas e Biológicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Criminais",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Pending",
+  },
+  {
+    "Nome do Curso": "Psicologia",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Económicas e Jurídicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Banned",
+  },
+  {
+    "Nome do Curso": "Ciências Sociais",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Políticas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Inactive",
+  },
+  {
+    "Nome do Curso": "Técnico de Informática",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Electrónica e Telecomunicações",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Pending",
+  },
+  {
+    "Nome do Curso": "Farmácia",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Pending",
+  },
+  {
+    "Nome do Curso": "Mecânica",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Banned",
+  },
+  {
+    "Nome do Curso": "Ciências Físicas e Biolṍgicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Físicas e Biolṍgicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Físicas e Biolṍgicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Físicas e Biolṍgicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+  {
+    "Nome do Curso": "Ciências Físicas e Biolṍgicas",
+    Descrição: "Um Curso Básico, Fixe e tudo mais...",
+    "Coordenador do Curso": "Jonh Doe",
+    status: "Active",
+  },
+];
