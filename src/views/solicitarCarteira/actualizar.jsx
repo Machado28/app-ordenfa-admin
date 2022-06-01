@@ -13,22 +13,15 @@ import {
 } from "@coreui/react";
 
 
-function SolicitarCarteira() {
+function ActualizarCarteira() {
     return (
         <>
             <CCard>
-                <CCardHeader> Formulário de Solicitação De Carteira </CCardHeader>
+                <CCardHeader> Formulário de Actualização De Carteira </CCardHeader>
                 <CCardBody>
                     <CForm>
                         <CRow>
                             <CCol md="6">
-                                
-                            <CLabel> VIA </CLabel>
-                                <CSelect custom name="via" id="via">
-                                    <option value="null">1</option>
-                                    <option value="CFB">2</option>
-                                    <br /><br />
-                                </CSelect>
                                 <CLabel> Curso </CLabel>
                                 <CSelect custom name="curso" id="curso">
                                     <option value="null">Selecione o Curso</option>
@@ -62,16 +55,16 @@ function SolicitarCarteira() {
                                 <CInput type="file" name="certificado" id="certificado" />
                             </CCol>
                             <br />
-                            
+
                             <CCol md="6">
                                 <br />
                                 <CLabel htmlFor="certificado">Foto tipo passe (fundo braco)</CLabel>
                                 <CInput type="file" name="certificado" id="certificado" />
                             </CCol>
-                            
+
                             <CCol md="6">
                                 <br />
-                                
+
                                 <CLabel htmlFor="certificado">declaração de
                                     Reconhecimento de Estudo/Homologação
                                     (INAAREES) </CLabel>
@@ -121,4 +114,4 @@ function SolicitarCarteira() {
     );
 }
 
-export default SolicitarCarteira;
+export default ActualizarCarteira;

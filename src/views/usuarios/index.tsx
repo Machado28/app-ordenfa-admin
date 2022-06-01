@@ -17,7 +17,7 @@ export default function Usuarios() {
 
             <S.UsuariosTitulo>+2 mil</S.UsuariosTitulo>
 
-            <S.UsuariosP>alunos gerenciados</S.UsuariosP>
+            <S.UsuariosP>Enfermairos gerenciados</S.UsuariosP>
           </S.UsuariosC>
 
           <S.UsuariosC>
@@ -37,7 +37,7 @@ export default function Usuarios() {
 
             <S.UsuariosTitulo>+3 mil</S.UsuariosTitulo>
 
-            <S.UsuariosP>escolas atendidas no País</S.UsuariosP>
+            <S.UsuariosP>Organizações como a Ordenfa  Enfermairos</S.UsuariosP>
           </S.UsuariosC>
         </S.Usuarios>
       </S.ContainerU>
