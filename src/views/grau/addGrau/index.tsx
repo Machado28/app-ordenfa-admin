@@ -14,17 +14,17 @@ import {
 } from "@coreui/react";
 import React from "react";
 
-function AddCurso() {
+function AddGrau() {
   return (
     <CRow>
       <CCol xs="12" sm="12">
         <CCard>
-          <CCardHeader>Adicionar Curso</CCardHeader>
+          <CCardHeader>Adicionar Grau </CCardHeader>
           <CCardBody>
             <CRow>
               <CCol xs="12">
                 <CFormGroup>
-                  <CLabel htmlFor="descricao">Nome do Curso</CLabel>
+                  <CLabel htmlFor="descricao">Nome do Grau</CLabel>
                   <CInput id="desicricao" required />
                 </CFormGroup>
               </CCol>
@@ -59,4 +59,4 @@ function AddCurso() {
   );
 }
 
-export default AddCurso;
+export default AddGrau;

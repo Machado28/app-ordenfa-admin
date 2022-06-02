@@ -13,11 +13,11 @@ import {
 } from "@coreui/react";
 
 
-function ActualizarCarteira() {
+function Reconhecimento() {
     return (
         <>
             <CCard>
-                <CCardHeader> Formulário de Actualização De Carteira </CCardHeader>
+                <CCardHeader> Formulário de Reconhecimento de Carteira Profissional </CCardHeader>
                 <CCardBody>
                     <CForm>
                         <CRow>
@@ -31,13 +31,7 @@ function ActualizarCarteira() {
                                     <option value="EI"> Cardiologia </option>
                                 </CSelect>
                             </CCol>
-                            <CCol md="6">
-                                <CLabel> Trocar para </CLabel>
-                                <CSelect custom name="curso" id="curso">
-                                    <option value="null">Carteira definitiva</option>
-                                    <option value="CFB">Técnico </option>
-                                </CSelect>
-                            </CCol>
+                            
                             <br />
                             <br />
                             <CCol md="6">
@@ -57,13 +51,13 @@ function ActualizarCarteira() {
                             <br />
                             <br />
                             <CCol md="6">
-                                <CLabel htmlFor="bi">Nº da Carteira</CLabel>
+                                <CLabel htmlFor="bi">Nº da Carteira Profissional</CLabel>
                                 <CInput type="text" name="bi" id="bi" placeholder="Nº" />
                             </CCol>
                             <br /><br />
                             <CCol md="6">
                                 <br />
-                                <CLabel htmlFor="certificado">Certificado ou Declaração (12ª classe)</CLabel>
+                                <CLabel htmlFor="certificado">Certificado ou Declaração (Curso)</CLabel>
                                 <CInput type="file" name="certificado" id="certificado" />
                             </CCol>
                             <br />
@@ -103,4 +97,4 @@ function ActualizarCarteira() {
     );
 }
 
-export default ActualizarCarteira;
+export default Reconhecimento;

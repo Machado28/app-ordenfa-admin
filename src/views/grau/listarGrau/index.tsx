@@ -1,19 +1,19 @@
 import React from "react";
 import { PSTable } from "src/shared/components/Table/index";
 import { dataTable } from "./tableSettins/dataTable";
-import { disciplinaTableFields } from "./tableSettins/fields";
+import { GrauTableFields } from "./tableSettins/fields";
 
-const Disciplina = () => {
+const ListarGrau = () => {
   return (
     <>
       <PSTable
-        title="Disciplinas"
+        title="Graus"
         data={dataTable}
-        fields={disciplinaTableFields}
-        linkAddNewRow="/matricula/add"
+        fields={GrauTableFields}
+        linkAddNewRow="/graus/add"
       />
     </>
   );
 };
 
-export default Disciplina;
+export default ListarGrau;
