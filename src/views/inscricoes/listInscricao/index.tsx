@@ -10,7 +10,6 @@ const ListPermissao = () => {
         title="Listar Permissoes"
         data={dataTable}
         fields={PermissaoTableFields}
-         
       />
     </>
   );
