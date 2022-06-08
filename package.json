@@ -67,7 +67,7 @@
   "scripts": {
     "start": "node --openssl-legacy-provider server.js --openssl-legacy-provider",
     "build": "react-scripts --openssl-legacy-provider build",
-    "dev": "react-scripts --openssl-legacy-provider start",
+    "dev": "react-scripts start",
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand",

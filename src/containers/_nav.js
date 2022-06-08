@@ -18,37 +18,38 @@ const _navAdmin = [
   },
   {
     _tag: "CSidebarNavDropdown",
-    name: "Controle de Pedidos Pedidos",
+    name: "Pedidos de solicitacao",
     route: "/gAcademica",
     icon: "cil-puzzle",
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        name: "Emissão de Carteira",
-        to: "/usuarios/list",
-      },],
-      _children: [
-        {
-          _tag: "CSidebarNavItem",
-          name: "Inscrição ",
-          to: "/usuarios/list",
-        },],
-        _children: [
-          {
-            _tag: "CSidebarNavItem",
-            name: "Reconhecimento de carteira",
-            to: "/usuarios/list",
-          },],
+     
           _children: [
             {
               _tag: "CSidebarNavItem",
               name: "Troca de Carteira ",
               to: "/usuarios/list",
-            },],
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Emissão de Carteira",
+              to: "/usuarios/list",
+            },
+             
+              {
+                _tag: "CSidebarNavItem",
+                name: "Inscrição ",
+                to: "/inscricao/list",
+              },
+               
+             {
+                  _tag: "CSidebarNavItem",
+                  name: "Reconhecimento de carteira",
+                  to: "/usuarios/list",
+             },],
+                
   },
   {
     _tag: "CSidebarNavDropdown",
-    name: "Definições ",
+    name: "Gestão Administrativa",
     route: "/gAcademica",
     icon: "cil-puzzle",
     _children: [
@@ -92,29 +93,45 @@ const _navAdmin = [
       },
       {
         _tag: "CSidebarNavItem",
+        name: "Permissao",
+        to: "/permissao/list",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "Cargo",
+        to: "/cargo/list",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "Permissao",
+        to: "/permissao/add",
+      },
+       
+      {
+        _tag: "CSidebarNavItem",
         name: "Tipo de Vias para a carteira ",
         to: "/tipo/via/list",
       },
-    ],
-  },
-  {
-    _tag: "CSidebarNavDropdown",
-    name: "Gestão Administrativa",
-    route: "/gAdmin",
-    icon: "cil-cursor",
-    _children: [
       {
         _tag: "CSidebarNavItem",
         name: "Funcionários",
         to: "/gestadmin/permissoes",
       },
-      {
-        _tag: "CSidebarNavItem",
-        name: "Acessos",
-        to: "/acessos",
-      },
     ],
   },
+  {
+    _tag: "CSidebarNavDropdown",
+    name: "Sair",
+    route: "/gAdmin",
+    icon: "cil-cursor",
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Sair",
+        to: "/login",
+      },
+    ],
+  }
 ];
 export { _navAdmin }
 
@@ -154,8 +171,6 @@ const _nav = [
         name: " Solicitar Minha Carteira",
         to: "/minhaCarteira",
       },
-
-
     ],
   },
 
