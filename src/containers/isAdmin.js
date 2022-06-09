@@ -5,7 +5,7 @@ const user={
     }
 }
 function IsAdmin (user={ role:{
-    description:"admin"
+    description:"admin5"
  }}){
   if(user.role.description==="admin")
   return true

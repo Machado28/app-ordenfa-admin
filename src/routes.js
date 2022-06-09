@@ -16,12 +16,12 @@ import { AddGrau } from "./views/grau";
 import { AddPermissao, ListPermissao } from "./views/permissao";
 import { AddCargo, ListCargo } from "./views/cargo";
 import ListInscricao from "./views/Pedidos/inscricao";
-import {ListInscrito} from "./views/Inscritos/index";
+import ListMembros from "./views/inscricoes/listInscricao";
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
   { path: "/pedido/inscricao/list", exact: true, name: "Pedidos de Inscricao" ,component:ListInscricao},
-  { path: "/inscricao/list", exact: true, name: "Membros Inscritos" ,component:ListInscrito},
+  { path: "/membros/list", exact: true, name: "Membros Inscritos" ,component:ListMembros},
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
   { path: "/permissao/list", name: "Listar Permissao", component: ListPermissao },
   { path: "/permissao/add", name: "Adicionar Permissao", component: AddPermissao },
@@ -69,11 +69,7 @@ const routes = [
     name: "Nível Academico",
     component: AddGrau,
   },
-  {
-    path: "/inscritos/list",
-    name: "Inscritos",
-    component: ListInscritos,
-  },
+ 
 
   
   { path: "/documentos", exact: true, name: "Documentos de identificação", component:ListDcumento  },

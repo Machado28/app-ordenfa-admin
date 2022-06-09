@@ -44,7 +44,14 @@ const _navAdmin = [
                   _tag: "CSidebarNavItem",
                   name: "Reconhecimento de carteira",
                   to: "/usuarios/list",
-             },],
+             },
+             {
+              _tag: "CSidebarNavItem",
+              name: "Membros Inscritos",
+              to: "/membros/list",
+         },
+            
+            ],
                 
   },
   {
