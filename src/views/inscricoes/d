@@ -1,0 +1,75 @@
+import React, { useState ,useNavigate} from "react";
+ 
+import {
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CForm,
+  CInput,
+  CLabel,
+  CRow,
+  CCol,
+  CSelect,
+  CButton,
+} from "@coreui/react";
+import { randomUUID } from "crypto";
+import array from "./array";
+
+
+function Incricoes() {
+  const [name, setname] = useState('');
+    const [age, setage] = useState('');
+  
+    // Using useNavigation for redirecting to pages
+    let history = useNavigate();
+  
+    // Function for creating a post/entry
+    const handelSubmit = (e) =>{
+        e.preventDefault();  // Prevent reload
+  
+        const ids = randomUUID() // Creating unique id
+        let uni = ids.slice(0,8) // Slicing unique id
+  
+        // Fetching a value from usestate and 
+        // pushing to javascript object
+        let a = name, b=age
+        array.push({id:uni,Name:a,Age:b})
+  
+  
+       // Redirecting to home page after creation done
+       history('/')
+    }
+  return (
+    <>
+      <CCard>
+        <CCardHeader> Formulário de Inscrição </CCardHeader>
+        <CCardBody>
+          <CForm>
+            <CRow>
+              <CCol md="6">
+                <CLabel htmlForm="name">Nome Completo</CLabel>
+                <CInput 
+                onChange={e=>setname(e.target.value)}
+                name="name" 
+                id="name" 
+                placeholder="Name" />
+              </CCol>
+          </CRow>
+          <br />
+          <br />
+            <CRow>
+              <CCol>
+                <CButton  onClick={e=>handelSubmit(e)}
+                 color="primary" type="submit">
+                  Inscrever-se
+                </CButton>
+              </CCol>
+            </CRow>
+          </CForm>
+        </CCardBody>
+      </CCard>
+    </>
+  );
+}
+
+export default Incricoes;

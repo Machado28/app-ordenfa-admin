@@ -1,174 +1,115 @@
-import { CCol, CInput, CLabel, CRow } from "@coreui/react";
-import { useState } from "react";
-import { animated, useTransition } from "react-spring";
-import { ContainerFoto, ContainerGeral, ContainerText } from "./style";
+import CIcon from "@coreui/icons-react";
+import {
+  CButton,
+  CCard,
+  CCardBody,
+  CCardGroup,
+  CCol,
+  CContainer,
+  CForm,
+  CInput,
+  CInputGroup,
+  CInputGroupPrepend,
+  CInputGroupText,
+  CLabel,
+  CRow,
+  CSelect,
+} from "@coreui/react";
+import React, { useState } from "react";
+import { ErrorMessage } from "rsuite";
 
-const ConfigData = [
-  <>
-    <h2> O Que pedimos na inscrição </h2>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Bi do Aluno</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Certificado do Aluno</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Atestado Médico do Aluno</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Cartão de Vacina do Aluno</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Recenseamento Militar</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor="">Cópia do Bi do encarregado</label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor=""> Classe Pretendida </label>
-    </field>
-    <field>
-      <input type="checkbox" name="" id="" />
-      <label htmlFor=""> Classe Anterior </label>
-    </field>
-  </>,
-  <>
-    <h2>Dados Pessoais </h2>
+function Register ()  {
+  const [userFullname,setUserFullname]=useState('')
+  const [userEmail,setUserEmail]=useState('')
+  const [userPassword,setUserPassword]=useState('')
+  const [messegeError,setMessegeError]=useState('')
 
-    <CRow>
-      <CCol md="6">
-        <CLabel htmlForm="name">Nome Completo</CLabel>
-        <CInput name="name" id="name" placeholder="Name" />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlForm="date-nasc">Data de Nascimento</CLabel>
-        <CInput
-          type="date"
-          name="date-nasc"
-          id="date-nasc"
-          placeholder="Data de Nascimento"
-        />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlFor="bi">Contacto</CLabel>
-        <CInput
-          type="number"
-          name="bi"
-          id="bi"
-          placeholder="+222 923 723 604"
-        />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlFor="address"> Endereço </CLabel>
-        <CInput
-          type="text"
-          name="address"
-          id="address"
-          placeholder="Ex: Angola Luanda, Sambizanga Casa S/N"
-        />
-      </CCol>
-    </CRow>
-  </>,
 
-  <>
-    <h2> Perfil da Escola </h2>
-
-    <CRow>
-      <CCol md="6">
-        <CLabel htmlFor="bi">Nº da Escola</CLabel>
-        <CInput type="number" name="bi" id="bi" placeholder="5111" />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlFor="bi">Nº de Identificação</CLabel>
-        <CInput type="number" name="bi" id="bi" placeholder="5111" />
-      </CCol>
-
-      <CCol md="6">
-        <CLabel htmlFor="bi">Bi Number</CLabel>
-        <CInput type="text" name="bi" id="bi" placeholder="Bi Number" />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlFor="address"> Endereço </CLabel>
-        <CInput
-          type="text"
-          name="address"
-          id="address"
-          placeholder="Ex: Angola Luanda, Sambizanga Casa S/N"
-        />
-      </CCol>
-    </CRow>
-  </>,
-
-  <>
-    <h2>Dados de acesso</h2>
-
-    <CRow>
-      <CCol md="6">
-        <CLabel htmlFor="bi">Insira o seu E-mail</CLabel>
-        <CInput type="gmail" name="gmail" id="gmail" placeholder="E-mail" />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlForm="name">Insira sua Senha</CLabel>
-        <CInput name="password" type="password" placeholder="Senha" />
-      </CCol>
-      <CCol md="6">
-        <CLabel htmlForm="name">Confirme a sua Senha</CLabel>
-        <CInput name="password" type="password" placeholder="Senha" />
-      </CCol>
-    </CRow>
-  </>,
-];
-
-const Config = () => {
-  const [index, setIndex] = useState(1);
-  const transitions = useTransition(index, {
-    from: { opacity: 0, transform: "scale(1.1)" },
-    enter: { opacity: 1, transform: "scale(1)" },
-    leave: { opacity: 0, transform: "scale(0.9)" },
-    delay: 100,
-  });
+ 
   return (
-    <ContainerGeral>
-      <ContainerFoto></ContainerFoto>
-      <ContainerText>
-        <div>
-          <form action="post">
-            {transitions(
-              (styles, item) =>
-                item && (
-                  <animated.div class="content" style={styles}>
-                    {ConfigData[index]}
-                  </animated.div>
-                )
-            )}
-            <div className="control">
-              <button
-                type="button"
-                disabled={index === 1}
-                onClick={() => setIndex(index - 1)}
-              >
-                Prev
-              </button>
-              <button
-                type="button"
-                disabled={index >= ConfigData.length - 1}
-                onClick={() => setIndex(index + 1)}
-              >
-                Next
-              </button>
-            </div>
-          </form>
-        </div>
-      </ContainerText>
-    </ContainerGeral>
+    <div className="c-app c-default-layout flex-row align-items-center">
+      <CContainer>
+        <CRow className="justify-content-center">
+          <CCol md="6">
+            <CCardGroup>
+              <CCard className="p-4">
+                <CCardBody>
+                  <CForm>
+                    <h1>Crie conta na ORDENA</h1>
+                    <p className="text-muted">cria conta na ordenfa e tenha beneficios</p>
+                    <CInputGroup className="mb-4">
+                      <CInputGroupPrepend>
+                        <CInputGroupText>
+                          <CIcon name="cil-user" />
+                        </CInputGroupText>
+                      </CInputGroupPrepend>
+                      <CInput
+                        type="text"
+                        placeholder="Nome Completo"
+                        autoComplete="current-name"
+                      />
+                    </CInputGroup>
+
+                    <CInputGroup className="mb-3">
+                      <CInputGroupPrepend>
+                        <CInputGroupText>
+                          <CIcon name="cil-user" />
+                        </CInputGroupText>
+                      </CInputGroupPrepend>
+                      <CInput
+                        type="text"
+                        placeholder="E-mail"
+                        autoComplete="username"
+                      />
+                      <ErrorMessage>ERRo gravr</ErrorMessage>
+                    </CInputGroup>
+
+                    <CInputGroup className="mb-4">
+                      <CInputGroupPrepend>
+                        <CInputGroupText>
+                          <CIcon name="cil-lock-locked" />
+                        </CInputGroupText>
+                      </CInputGroupPrepend>
+                      <CInput
+                        type="password"
+                        placeholder="Password"
+                        autoComplete="current-password"
+                      />
+                    </CInputGroup>
+
+                    <CInputGroup className="mb-4">
+                      <CInputGroupPrepend>
+                        <CInputGroupText>
+                          <CIcon name="cil-lock-locked" />
+                        </CInputGroupText>
+                      </CInputGroupPrepend>
+                      <CInput
+                        type="text"
+                        placeholder="Comfirmar Senha"
+                        autoComplete="current-name"
+                      />
+                    </CInputGroup>
+                    <CRow>
+                      <CCol xs="6">
+                        <CButton color="primary" className="px-4">
+                          Criar Conta
+                        </CButton>
+                      </CCol>
+                      <CCol xs="6" className="text-right">
+                        <CButton color="link" to={'/login'} className="px-0">
+                          ja tem uma conte?
+                        </CButton>
+                      </CCol>
+                    </CRow>
+                  </CForm>
+                </CCardBody>
+              </CCard>
+            </CCardGroup>
+          </CCol>
+        </CRow>
+      </CContainer>
+    </div>
   );
 };
 
-export default Config;
+export default Register;

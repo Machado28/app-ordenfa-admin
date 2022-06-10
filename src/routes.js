@@ -17,7 +17,9 @@ import { AddPermissao, ListPermissao } from "./views/permissao";
 import { AddCargo, ListCargo } from "./views/cargo";
 import ListInscricao from "./views/Pedidos/inscricao";
 import ListMembros from "./views/inscricoes/listInscricao";
+import Login from "./views/pages/login/Login";
 
+ 
 const routes = [
   { path: "/", exact: true, name: "Home" },
   { path: "/pedido/inscricao/list", exact: true, name: "Pedidos de Inscricao" ,component:ListInscricao},
@@ -30,7 +32,7 @@ const routes = [
   { path: "/encontrar/perfil", exact: true, name: "Perfil", component: PesquisarPerfil },
  
    
-  { path: "/inscricao", name: "Inscrição", component: Inscricoes },
+  { path: "/inscricao", name: "Inscrição", component:Inscricoes,private:true },
   { path: "/actualizar/carteira", name: "Actualizar Carterira", component: ActualizarCarterira },
   { path: "/reconhecimento/carteira", name: "Reconhecimento de Carteira Profissional", component: Reconhecimento },
   {
@@ -79,6 +81,7 @@ const routes = [
   { path: "/cargo/add", name: "Adicionar Cargo", component: AddCargo },
   { path: "/cargo/list", name: "Listar Cargo", component: ListCargo },
   
+  
 ];
-
+ 
 export default routes;

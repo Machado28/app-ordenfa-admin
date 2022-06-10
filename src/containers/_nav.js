@@ -200,7 +200,19 @@ const _nav = [
       },
     ],
   },
-
+  {
+    _tag: "CSidebarNavDropdown",
+    name: "Sair",
+    route: "/gAdmin",
+    icon: "cil-cursor",
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Sair",
+        to: "/login",
+      },
+    ],
+  }
 ];
 
 export default _nav;

@@ -24,7 +24,7 @@ const ListMembros = () => {
       <CRow>
         <CCol>
           <CCard>
-            <CCardHeader>Traffic {" & "} Sales</CCardHeader>
+            <CCardHeader>Inscrever {" & "} - se</CCardHeader>
             <CCardBody>
               <table className="table table-hover table-outline mb-0 d-none d-sm-table">
                 <thead className="thead-light">

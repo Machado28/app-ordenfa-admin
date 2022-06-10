@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import {useHistory} from 'react-router-dom'
+import {uuid  }from 'uuidv4'
 import {
   CCard,
   CCardBody,
@@ -11,9 +13,32 @@ import {
   CSelect,
   CButton,
 } from "@coreui/react";
+import array from "./array";
 
 
 function Incricoes() {
+  const [name, setname] = useState('');
+    const [age, setage] = useState('');
+  
+    // Using useNavigation for redirecting to pages
+    let history = useHistory();
+  
+    // Function for creating a post/entry
+    const handelSubmit = (e) =>{
+        e.preventDefault();  // Prevent reload
+  
+        const ids = uuid() // Creating unique id
+        let uni = ids.slice(0,8) // Slicing unique id
+  
+        // Fetching a value from usestate and 
+        // pushing to javascript object
+        let a = name, b=age
+        array.push({id:uni,Name:a,Age:b})
+  
+  
+       // Redirecting to home page after creation done
+       history('/')
+      }
   return (
     <>
       <CCard>
