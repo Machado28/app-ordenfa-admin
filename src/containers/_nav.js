@@ -135,7 +135,7 @@ const _navAdmin = [
       {
         _tag: "CSidebarNavItem",
         name: "Sair",
-        to: "/login",
+        to: "/logout",
       },
     ],
   }
@@ -209,7 +209,7 @@ const _nav = [
       {
         _tag: "CSidebarNavItem",
         name: "Sair",
-        to: "/login",
+        to: "/logout",
       },
     ],
   }

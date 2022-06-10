@@ -1,1 +1,1 @@
-# Portal das escolas - admin
+https://app-ordefa-admin.herokuapp.com/#/login

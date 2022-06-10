@@ -18,6 +18,7 @@ import { AddCargo, ListCargo } from "./views/cargo";
 import ListInscricao from "./views/Pedidos/inscricao";
 import ListMembros from "./views/inscricoes/listInscricao";
 import Login from "./views/pages/login/Login";
+import Logout from "./views/pages/logout";
 
  
 const routes = [
@@ -30,6 +31,8 @@ const routes = [
   { path: "/minhaCarteira", name: "Minha Carteira", component: SolicitarCarteira },
   //New routes:
   { path: "/encontrar/perfil", exact: true, name: "Perfil", component: PesquisarPerfil },
+  { path: "/logout", exact: true, name: "Perfil", component: Logout },
+  
  
    
   { path: "/inscricao", name: "Inscrição", component:Inscricoes,private:true },
