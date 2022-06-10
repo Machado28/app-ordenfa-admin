@@ -67,7 +67,7 @@ function Register ()  {
    setMessageError(res)
    return ;}
    const host= window.location.origin
-   alert(host)
+
    const path='login'
   
    
