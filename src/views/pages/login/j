@@ -18,53 +18,44 @@ import {
 } from "@coreui/react";
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
- 
+import { ErrorMessage } from "rsuite";
 import useAuth from "src/hooks/useAuth";
 
 
 const Login=  ()=> {
-  const {signin}=useAuth()
+  const {signin} = useAuth()
+ const redirect = Redirect()
 
-  const [userEmail,setUserEmail]=useState("")
-  const [userPassword,setUserPassword]=useState("")
-  const [messageError,setMessageError]=useState("")
+  const [userEmail,setUserEmail]=useState("kkk")
+  // const [userPassword,setUserPassword]=useState("kkk")
+  // const [messageError,setMessageError]=useState("kkk")
 
   
-  const HandleEmail =(e)=>{
-    setMessageError('')
-   setUserEmail(e.target.value)
-   
-  }
-  const HandlePass =(e)=>{
-    setMessageError('')
-    setUserPassword(e.target.value)
-   
-   }
- const handleLogin =()=>{
-   if (!userEmail| !userPassword){
-     setMessageError('preecha todos os campos!')
-     return
-   }
 
-   const res= signin(userEmail,userPassword)
-   if(res){
-   setMessageError(res)
-   return <Redirect to="/register"></Redirect>;}
-   
-  return <Redirect to="/register"></Redirect>;
- } 
- 
+ const handleLogin =()=>{
+  //  if (!userEmail|userPassword){
+  //    setMessageError('preecha todos os campos!')
+  //    return
+  //  }
+
+  //  const res= signin(userEmail,userPassword)
+  //  if(res){
+  //  setMessageError(res)
+  //  return}
+
+   redirect('/')
+ }
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
-          <CCol md="4">
+          <CCol md="6">
             <CCardGroup>
               <CCard className="p-4">
                 <CCardBody>
                   <CForm>
                     <h1>Login</h1>
-                    <p className="text-muted">Faça login e obtena privilegios</p>
+                    <p className="text-muted">faça login e tenha privilégios</p>
                     <CInputGroup className="mb-3">
                       <CInputGroupPrepend>
                         <CInputGroupText>
@@ -75,7 +66,7 @@ const Login=  ()=> {
                         type="text"
                         placeholder="E-mail ou número de telemovel"
                         autoComplete="username"
-                        onChange={HandleEmail }
+                        // onChange={(e)=>[setUserEmail(e.target.value), setMessageError('')]}
                       />
                     </CInputGroup>
 
@@ -89,16 +80,16 @@ const Login=  ()=> {
                         type="password"
                         placeholder="Password"
                         autoComplete="current-password"
-                        onChange={HandlePass}
+                        // onChange={(e)=>[setUserPassword(e.target.value), setMessageError('')]}
                       />
                        
                     </CInputGroup>
                     <CLabel color="danger"  className="px-1">
-                       {messageError}
+                        {/* {messageError} */}
                         </CLabel>
                     <CRow>
                       <CCol xs="6">
-                        <CButton onClick={handleLogin} color="primary" className="px-4">
+                        <CButton color="primary" className="px-4">
                           Login
                         </CButton>
                       </CCol>
