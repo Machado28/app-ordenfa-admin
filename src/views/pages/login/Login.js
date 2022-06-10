@@ -17,9 +17,10 @@ import {
   CRow,
 } from "@coreui/react";
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+ 
  
 import useAuth from "src/hooks/useAuth";
+import Redirect from "src/util/redirect";
 
 
 const Login=  ()=> {
@@ -49,9 +50,9 @@ const Login=  ()=> {
    const res= signin(userEmail,userPassword)
    if(res){
    setMessageError(res)
-   return <Redirect to="/register"></Redirect>;}
+   }
    
-  return <Redirect to="/register"></Redirect>;
+  return Redirect('dashboard')
  } 
  
   return (
