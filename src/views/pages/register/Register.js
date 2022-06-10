@@ -16,15 +16,63 @@ import {
   CSelect,
 } from "@coreui/react";
 import React, { useState } from "react";
+ 
 import { ErrorMessage } from "rsuite";
+import useAuth from "src/hooks/useAuth";
+import Redirect from "src/util/redirect";
 
 function Register ()  {
-  const [userFullname,setUserFullname]=useState('')
-  const [userEmail,setUserEmail]=useState('')
-  const [userPassword,setUserPassword]=useState('')
-  const [messegeError,setMessegeError]=useState('')
+  const {signup}=useAuth()
 
+  const [userEmail,setUserEmail]=useState("")
+  const [userFullName,setUserFullName]=useState("")
+  const [userPassword,setUserPassword]=useState("")
+  const [userConfirmPassword,setUserConfirmPassword]=useState("")
+  const [messageError,setMessageError]=useState("")
 
+  
+  const HandleEmail =(e)=>{
+    setMessageError('')
+   setUserEmail(e.target.value)
+   
+  }
+  const HandleFullName =(e)=>{
+    setMessageError('')
+    setUserFullName(e.target.value)
+   
+  }
+  const HandlePass =(e)=>{
+    setMessageError('')
+    setUserPassword(e.target.value)
+   
+   }
+   const HandleConfirmPass =(e)=>{
+    setMessageError('')
+    setUserConfirmPassword(e.target.value)
+   
+   }
+ const handleRegister =()=>{
+   if (!userEmail| !userPassword | !userConfirmPassword){
+     setMessageError('preecha todos os campos!')
+     return
+   }
+   if (userPassword !== userConfirmPassword){
+     setMessageError('As as devem ser iguais!')
+     return
+   }
+
+   const res= signup(userFullName,userEmail,userConfirmPassword)
+   if(res){
+  
+   setMessageError(res)
+   return ;}
+   const host= window.location.origin
+   alert(host)
+   const path='login'
+  
+   
+  return Redirect(path)
+   }
  
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
@@ -47,6 +95,7 @@ function Register ()  {
                         type="text"
                         placeholder="Nome Completo"
                         autoComplete="current-name"
+                        onChange={HandleFullName}
                       />
                     </CInputGroup>
 
@@ -60,8 +109,9 @@ function Register ()  {
                         type="text"
                         placeholder="E-mail"
                         autoComplete="username"
+                        onChange={HandleEmail}
                       />
-                      <ErrorMessage>ERRo gravr</ErrorMessage>
+                   
                     </CInputGroup>
 
                     <CInputGroup className="mb-4">
@@ -74,6 +124,7 @@ function Register ()  {
                         type="password"
                         placeholder="Password"
                         autoComplete="current-password"
+                        onChange={HandlePass}
                       />
                     </CInputGroup>
 
@@ -87,11 +138,14 @@ function Register ()  {
                         type="text"
                         placeholder="Comfirmar Senha"
                         autoComplete="current-name"
+                        onChange={HandleConfirmPass}
                       />
+                      
                     </CInputGroup>
+                     <CLabel> {messageError}</CLabel>
                     <CRow>
                       <CCol xs="6">
-                        <CButton color="primary" className="px-4">
+                        <CButton onClick={handleRegister} color="primary" className="px-4">
                           Criar Conta
                         </CButton>
                       </CCol>
