@@ -5,8 +5,8 @@ const Redirect=(path='register')=>{
 }
 export default Redirect;
 
- const RedirectExternal=(url)=>{
-  const route=window.location.replace(url)
+ const RedirectExternal=(url="")=>{
+  const route=window.location.href=url
  return route
 }
 export {RedirectExternal}
